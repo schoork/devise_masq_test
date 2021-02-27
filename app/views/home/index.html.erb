@@ -1,5 +1,14 @@
 <h1>Home#Index</h1>
 
+<p>
+  You are currently logged in as <%= current_user.name %>.
+  <% if user_masquerade? %>
+    <%= link_to "Go back to yourself", back_masquerade_path(current_user) %>
+  <% else %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% end %>
+</p>
+
 <table>
   <thead>
     <tr>
@@ -13,7 +22,6 @@
         Email
       </th>
       <th>
-
       </th>
     </tr>
   </thead>
@@ -30,6 +38,7 @@
           <%= user.email %>
         </td>
         <td>
+          <%= link_to "Login As", masquerade_path(user) %>
         </td>
       </tr>
     <% end %>
