@@ -59,3 +59,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Devise gems
 gem 'devise', '~> 4.7.3'
 gem 'devise_masquerade', '~> 1.3.5'
+gem 'apartment', git: 'https://github.com/influitive/apartment', ref: 'f266f73'
