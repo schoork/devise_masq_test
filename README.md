@@ -1,24 +1,12 @@
-# README
+# devise_masq_test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run locally:
+1. Create and migrate the database
+1. Run `$ rake add_users`
+1. Run `$ rails server`
+1. Go to `masqtest.lvh.me:3000` in browser
+1. Login in as admin user
+    - email: admin@example.com
+    - password: foobar
+1. Click **Login As** link next to **Regular** user
+1. Click **Go back to yourself** to test out the devise back button
